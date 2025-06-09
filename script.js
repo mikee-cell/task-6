@@ -1,1 +1,47 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {\n    event.preventDefault();\n    let isValid = true;\n    const name = document.getElementById('name');\n    const email = document.getElementById('email');\n    const message = document.getElementById('message');\n    const nameError = document.getElementById('name-error');\n    const emailError = document.getElementById('email-error');\n    const messageError = document.getElementById('message-error');\n    const successMessage = document.getElementById('success-message');\n    nameError.innerText = '';\n    emailError.innerText = '';\n    messageError.innerText = '';\n    successMessage.innerText = '';\n\n    if (name.value.trim() === '') {\n        nameError.innerText = 'Name is required.';\n        isValid = false;\n    }\n    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;\n    if (email.value.trim() === '') {\n        emailError.innerText = 'Email is required.';\n        isValid = false;\n    } else if (!emailRegex.test(email.value.trim())) {\n        emailError.innerText = 'Invalid email format.';\n        isValid = false;\n    }\n    if (message.value.trim() === '') {\n        messageError.innerText = 'Message is required.';\n        isValid = false;\n    }\n\n    if (isValid) {\n        successMessage.innerText = 'Form submitted successfully!';\n    }\n});
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let isValid = true;
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const messageError = document.getElementById('message-error');
+    const successMessage = document.getElementById('success-message');
+
+    // Clear previous errors and messages
+    nameError.innerText = '';
+    emailError.innerText = '';
+    messageError.innerText = '';
+    successMessage.innerText = '';
+
+    // Validate name
+    if (name.value.trim() === '') {
+        nameError.innerText = 'Name is required.';
+        isValid = false;
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.value.trim() === '') {
+        emailError.innerText = 'Email is required.';
+        isValid = false;
+    } else if (!emailRegex.test(email.value.trim())) {
+        emailError.innerText = 'Invalid email format.';
+        isValid = false;
+    }
+
+    // Validate message
+    if (message.value.trim() === '') {
+        messageError.innerText = 'Message is required.';
+        isValid = false;
+    }
+
+    // If all fields are valid
+    if (isValid) {
+        successMessage.innerText = 'Form submitted successfully!';
+    }
+});
