@@ -1,1 +1,23 @@
-body { font-family: Arial, sans-serif; margin: 50px; }\nform { display: flex; flex-direction: column; }\ndiv { margin-bottom: 15px; }\n.error { color: red; font-size: 0.9em; }\n.success { color: green; font-size: 1.2em; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.success {
+    color: green;
+    font-size: 1.2em;
+}
