@@ -1,1 +1,32 @@
-<!DOCTYPE html>\n<html lang='en'>\n<head>\n    <meta charset='UTF-8'>\n    <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n    <link rel='stylesheet' href='styles.css'>\n    <title>Contact Form</title>\n</head>\n<body>\n    <h1>Contact Us</h1>\n    <form id='contact-form'>\n        <div>\n            <label for='name'>Name:</label>\n            <input type='text' id='name' required>\n            <div class='error' id='name-error'></div>\n        </div>\n        <div>\n            <label for='email'>Email:</label>\n            <input type='email' id='email' required>\n            <div class='error' id='email-error'></div>\n        </div>\n        <div>\n            <label for='message'>Message:</label>\n            <textarea id='message' required></textarea>\n            <div class='error' id='message-error'></div>\n        </div>\n        <button type='submit'>Submit</button>\n    </form>\n    <div class='success' id='success-message'></div>\n    <script src='script.js'></script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+            <div class="error" id="name-error"></div>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+            <div class="error" id="email-error"></div>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <div class="error" id="message-error"></div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="success" id="success-message"></div>
+    <script src="script.js"></script>
+</body>
+</html>
